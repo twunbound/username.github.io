@@ -24,7 +24,11 @@ body{
 }
 
 body p{
-	/*margin-bottom: 21px;*/
+text-align: justify;
+font-size: 13pt;
+font-family: serif;
+line-height: 1.8;
+margin-bottom: 1em;
 }
 
 body a{
@@ -1421,7 +1425,7 @@ blockquote:before, blockquote:after {
 
 .news-content h4{
 	font-weight:bold;
-	margin-bottom: 1.5em;
+	margin: 1.5em 0;
 }
 
 @media (max-width: 800px) {
@@ -1438,4 +1442,12 @@ blockquote:before, blockquote:after {
 		float:none;
 		max-width:100%;
 	}
+	body p{
+text-align: justify;
+font-size: 13pt;
+font-family: serif;
+line-height: 1.8;
+margin-bottom: 0;
+text-indent: 1em;
+}
 }

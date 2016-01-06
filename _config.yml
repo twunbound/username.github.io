@@ -1,0 +1,15 @@
+collections:
+  view:
+    output: true
+defaults:
+  -
+    scope:
+      path: "view"
+      type: "view"
+    values:
+      layout: "post"
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+    values:
+      layout: "default"

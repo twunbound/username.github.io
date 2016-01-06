@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="zh_TW">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>{{ page.title }}</title>
+	<meta charset="utf-8">
+	<!--[if lt IE 9]><script src="js/html5.js"></script><![endif]-->
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- JS -->
+	<meta name="description" content="2016大選的意義，不僅在於執政的政黨可能輪替，而更在於立法院所代表的國會可能如何改革。對於國會改革，許多人都相信：國民黨需要教訓、民進黨需要制衡、代表年輕世代的第三力量要展現。這個計劃，就是希望能提供目前沒有資源、沒有人力的年輕改革力量一些支援，讓他們在做的事情得到多一些曝光的機會，使得期待改革的人能看到年輕人正在做些什麼，也使得進行改革的年輕人能得到期待改革的人的支持。" />
+	<meta property="og:image" content="{{page.image}}" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+	<!-- ENDS Flex Slider -->
+	<!--[if IE 6]>
+	<link rel="stylesheet" href="css/ie6-hacks.css" media="screen">
+	<script src="js/DD_belatedPNG.js"></script>
+	<script>/* EXAMPLE */ DD_belatedPNG.fix('*');</script>
+	<![endif]-->
+	<!-- Lessgrid -->
+	<link rel="stylesheet" media="all" href="/css/lessgrid.css">
+	<link rel="stylesheet" media="all" href="/css/style.css">
+</head>
+<body>
+  <!-- mobile-nav -->
+  <div id="mobile-nav-holder">
+    <div class="wrapper">
+      <div id="nav-open"><a href="/">首頁</a></div>
+    </div>
+  </div>
+  <!-- ENDS mobile-nav -->
+
+  <header class="header-2">
+    <div class="wrapper"> <a href="/" id="logo"><img src="/images/logo.png" alt=""></a>
+      <nav>
+        <ul id="nav" >
+           <li><a href="/">首頁</a></li>
+           <li><a href="/#candidate">我們所"看見"的候選人</a></li>
+        </ul>
+      </nav>
+      <div class="clearfix"></div>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <div id="main">
+    <!-- social -->
+      <div id="content">
+        <div class="header" >
+
+          <a name="users" id="#candidate"></a>
+          <div class="pull-right">
+            <div class="fb-like" data-href="http://twunbound.github.io/view/why" data-layout="button_count" data-action="like"
+            data-show-faces="true" data-share="true"></div>
+          </div>
+
+          <h2 class="article-title">{{ page.title }}</h2>
+
+          <p class="article-author">
+            作者：<a href="https://www.facebook.com/rexhow.dna/">郝明義</a>、 陳季芳
+          </p>
+
+          <p class="article-time">{{ page.time }}</p>
+
+          {% if page.tags or page.party %}
+            <ul class="{{ page.party }}">
+							<li class="label label-success">
+								{% if page.party == "greensdparty" %}
+									綠社盟
+								{% endif %}
+							</li>
+            	{% for tag in page.tags %}
+	            <li class="label label-success">
+	              {{ tag }}
+	            </li>
+          		{% endfor %}
+          </ul>
+        {% endif %}
+      </div>
+
+      <hr />
+
+      <div class="news-content">
+				<img style="margin-top:20px;" src="/images/0{{ page.index }}-01.jpg" alt="{{ page.person }}" class="news-photo-1">
+				<blockquote>{{ page.subtitle }}</blockquote>
+      	{{ content }}
+
+      </div>
+
+			<div style="padding:24px;">
+				<div data-href="{{ page.fanspage }}" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false"
+							data-show-facepile="true" class="fb-page">
+							<div class="fb-xfbml-parse-ignore">
+								<blockquote cite="https://www.facebook.com/2016vote4labor/">
+									<a href="https://www.facebook.com/2016vote4labor/">{{ page.person }}</a>
+								</blockquote>
+							</div>
+				</div>
+			</div>
+
+      <div class="article-footer" style="padding:24px;">
+
+			<a target="_blank" href="http://www.greenparty.org.tw/civicrm/contribute/transact?reset=1&amp;id=4">捐款支持綠黨</a>
+			<br /><br />
+
+      {% if page.next %}
+        <a href="{{page.next.url}}">上一篇：{{page.next.title}} &raquo;</a>
+      {% endif %}
+      <br/><br/>
+      {% if page.previous %}
+        <a href="{{page.previous.url}}">下一篇：{{page.previous.title}} &raquo;</a>
+      {% endif %}
+      <br /><br />
+      <a href="/" >看所有採訪文章列表</a>
+    </div>
+
+    <div style='padding:24px'>
+    <h4>網友迴響</h4>
+    <div class="fb-comments"  data-width="100%" data-href="http://twunbound.github.io/view/why" data-numposts="6"></div>
+    </div>
+
+    </div>
+    <!-- ENDS content -->
+    <div class="clearfix"></div>
+    <div class="shadow-main"></div>
+  </div>
+  <!-- ENDS MAIN -->
+
+  <footer style="clear:both;">
+    <div class="wrapper">
+      <section id="copyright">
+        <p>本站內容採用 CC BY-NC-SA 3.0 授權分享。</p>
+        <p>採訪：郝明義、陳季芳；LOGO 設計：Akibo</p>
+        <p>網站設計：知名不具；<a href="https://github.com/twunbound/twunbound.github.io">Fork me on github.</p>
+      </section>
+      <div class="clearfix"></div>
+    </div>
+    <div id="to-top"></div>
+  </footer>
+  <div id="fb-root"></div>
+
+  <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v2.5";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-67262972-3', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+collections:
+  post:
+    output: true
+    permalink: /view/:path/
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+    values:
+      layout: "default"
+  -
+    scope:
+      path: ""
+      type: "post"
+    values:
+      layout: "post"
+

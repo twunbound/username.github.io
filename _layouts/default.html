@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh_TW">
+<head>
+	<title>年輕力量進國會</title>
+	<meta property="og:image" content="http://twunbound.github.io/images/ogimage.png">
+
+	{% include meta.html %}
+	<link rel="stylesheet" media="all" href="/css/fb_style.css">
+
+</head>
+<body>
+
+	{% include header.html %}
+
+	<!-- MAIN-->
+	<div id="main">
+		{{ content }}
+	</div>
+	<!-- ENDS MAIN-->
+
+	{% include footer.html %}
+
+	<div class=" fb_reset" id="fb-root">
+		<div style="position: absolute; top: -10000px; height: 0px; width: 0px;">
+			<div>
+				<iframe src="http://staticxx.facebook.com/connect/xd_arbiter.php?version=42#channel=f3109fe4505a684&amp;origin=http%3A%2F%2Flocalhost%3A4000" style="border: medium none;" tabindex="-1" title="Facebook Cross Domain Communication Frame" aria-hidden="true" id="fb_xdm_frame_http" scrolling="no" allowfullscreen="true" allowtransparency="true" name="fb_xdm_frame_http" frameborder="0"></iframe>
+				<iframe src="https://staticxx.facebook.com/connect/xd_arbiter.php?version=42#channel=f3109fe4505a684&amp;origin=http%3A%2F%2Flocalhost%3A4000" style="border: medium none;" tabindex="-1" title="Facebook Cross Domain Communication Frame" aria-hidden="true" id="fb_xdm_frame_https" scrolling="no" allowfullscreen="true" allowtransparency="true" name="fb_xdm_frame_https" frameborder="0"></iframe>
+			</div>
+		</div>
+		<div style="position: absolute; top: -10000px; height: 0px; width: 0px;">
+			<div></div>
+		</div>
+	</div>
+
+	<script src="//www.google-analytics.com/analytics.js" async=""></script>
+	<script src="//connect.facebook.net/zh_TW/sdk.js#xfbml=1&amp;version=v2.5" id="facebook-jssdk"></script>
+	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+
+	<!-- Latest compiled and minified JavaScript-->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	<script>
+  (function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = "//connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v2.5"; fjs.parentNode.insertBefore(js, fjs); }(document, 'script', 'facebook-jssdk'));</script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','//www.google-analytics.com/analytics.js','ga'); ga('create', 'UA-67262972-3', 'auto'); ga('send', 'pageview'); </script>
+
+</body>
+</html>
